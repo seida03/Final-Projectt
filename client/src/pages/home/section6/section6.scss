@@ -1,0 +1,151 @@
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35rem;
+    background-color: rgb(255, 249, 247);
+    padding-right: 50px;
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 20rem;
+        width: 18rem;
+        position: relative;
+        justify-content: center;
+        margin-left: 50px;
+
+
+        .back {
+            animation: fadeInBottom 2000ms ease-in-out;
+width:7rem ;
+        }
+
+        .front {
+            position: absolute;
+            left: 27%;
+            animation: fadeInBottom 1000ms ease-in-out;
+
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 17px;
+            font-style: normal;
+            color: rgb(0, 0, 0);
+            line-height: 23.001px;
+            text-decoration: none;
+            transform: uppercase;
+            font-family: latoLight;
+            letter-spacing: 1.275px;
+            margin: 0%;
+            margin-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(55, 54, 54);
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            font-style: normal;
+            color: rgb(114, 113, 113);
+            line-height: 23px;
+            text-decoration: none;
+            transform: none;
+            font-family: cormorantLight;
+            letter-spacing: 0;
+            margin: 0%;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(165, 163, 163);
+            }
+        }
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .section6 {
+        width: 100%;
+
+        .icons {
+            flex-direction: column;
+            width: 100%;
+            height: 110rem;
+            background-color: rgb(255, 249, 247);
+            padding: 0%;
+
+            .icon {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                height: 20rem;
+                width: 100%;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                margin: 0%;
+                padding: 20px;
+
+                .front {
+                    position: absolute;
+                    left: 35%;
+                    animation: fadeInBottom 1000ms ease-in-out;
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .section6 {
+        width: 100%;
+
+        .icons {
+            flex-direction: column;
+            width: 100%;
+            height: 110rem;
+            background-color: rgb(255, 249, 247);
+            padding: 15%;
+
+            .icon {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                height: 20rem;
+                width: 100%;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                margin: 0%;
+                padding: 20px;
+
+
+                .front {
+                    position: absolute;
+                    left: 35%;
+                    animation: fadeInBottom 1000ms ease-in-out;
+
+                }
+            }
+        }
+    }
+}

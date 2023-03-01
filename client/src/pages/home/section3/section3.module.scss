@@ -1,0 +1,96 @@
+.section3 {
+    margin-top: 100px;
+
+    .cards {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+
+        .card {
+            height: 330px;
+            width: 25%;
+            position: relative;
+
+            img {
+                height: 330px;
+                width: 100%;
+
+            }
+
+            .ust {
+                background-color: rgb(255, 255, 255);
+                height: 300px;
+                width: 90%;
+                margin: auto;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+
+                &:hover {
+                    opacity: 1;
+                    animation: fadeInBottom 500ms ease-in-out;
+
+                }
+
+                h3 {
+                    font-weight: 400;
+                    font-size: 17px;
+                    font-style: normal;
+                    color: rgb(0, 0, 0);
+                    line-height: 23.001px;
+                    text-decoration: none;
+                    transform: uppercase;
+                    font-family: Lato;
+                    letter-spacing: 1.275px;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 17px;
+                    font-style: normal;
+                    color: rgb(131, 131, 131);
+                    line-height: 23px;
+                    text-decoration: none;
+                    transform: none;
+                    font-family: Cormorant;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section3{
+        .cards {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+    
+    
+            .card {
+                height: 330px;
+                width: 100%;
+                position: relative;
+    
+            }
+        }
+    }
+}

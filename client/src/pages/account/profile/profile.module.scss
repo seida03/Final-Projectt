@@ -1,0 +1,480 @@
+.profile {
+    margin-top: 5rem;
+    width: 100%;
+    height: 40rem;
+
+    .profiletable {
+        width: 50%;
+        height: 24rem;
+        background-color: rgb(254, 234, 231);
+        display: flex;
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        .img {
+            display: flex;
+            background-color: rgb(3, 2, 2);
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            padding-top: 15px;
+            width: 14rem;
+
+            img {
+                height: 150px;
+                width: 150px;
+            }
+
+            h3 {
+                font-family: Cormorant;
+                color: rgb(254, 234, 231);
+                margin-top: 15px;
+                font-weight: 600;
+            }
+
+           div{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon {
+                font-size: 25px;
+                color: rgb(254, 234, 231);
+                border: 1px rgb(110, 108, 108) solid;
+                border-radius: 50%;
+                margin-left: 10px;
+                padding: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    border: 1px white solid;
+                }
+            }
+           }
+        }
+
+        .info {
+            width: 24rem;
+            margin: auto;
+
+            h4 {
+                margin: 0%;
+                font-size: 32px;
+                margin-top: 17px;
+                margin-bottom: 5px;
+                font-family: tuesdayNight;
+            }
+
+            hr {
+                margin: 0%;
+            }
+
+            .emailphone {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 20px;
+                
+
+                div {
+                    width: 11rem;
+                    h5 {
+                        font-size: 22px;
+                        font-family: Cormorant;
+                        margin: 0%;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-family: Cormorant;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .addressgender {
+                display: flex;
+                justify-content: space-around;
+
+                div {
+                    width: 11rem;
+                    h5 {
+                        font-size: 22px;
+                        font-family: Cormorant;
+                        margin: 0%;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-family: Cormorant;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .account {
+                margin-top: 30px;
+
+                h4 {
+                    font-family: tuesdayNight;
+
+                }
+
+                div {
+                    display: flex;
+                    margin-bottom: 20px;
+
+                    h4 {
+                        margin-left: 25px;
+                        font-family: Cormorant;
+                        cursor: pointer;
+                        color: rgb(42, 41, 41);
+                        font-size: 24px;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .profile {
+        margin-top: 5rem;
+        width: 100%;
+       height: 35rem;
+        .profiletable {
+            width: 100%;
+            height: max-content;
+            background-color: rgb(254, 234, 231);
+            display: flex;
+            flex-direction: column;
+            top: 33%;
+            left:0% ;    
+            .img {
+                display: flex;
+                background-color: rgb(3, 2, 2);
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                padding-top: 15px;
+                width: 100%;
+    
+                img {
+                    height: 150px;
+                    width: 150px;
+                }
+    
+                h3 {
+                    font-family: Cormorant;
+                    color: rgb(254, 234, 231);
+                    margin-top: 15px;
+                    font-weight: 600;
+                }
+    
+               div{
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon {
+                    font-size: 25px;
+                    color: rgb(254, 234, 231);
+                    border: 1px rgb(110, 108, 108) solid;
+                    border-radius: 50%;
+                    margin-left: 10px;
+                    padding: 5px;
+                    cursor: pointer;
+    
+                    &:hover {
+                        border: 1px white solid;
+                    }
+                }
+               }
+            }
+    
+            .info {
+                width: 100%;
+    
+                h4 {
+                    margin: 0%;
+                    font-size: 32px;
+                    margin-top: 17px;
+                    margin-bottom: 5px;
+                    font-family: tuesdayNight;
+                    margin-left: 15px;
+                }
+    
+    
+                .emailphone {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                    
+    
+                    div {
+                        width: 11rem;
+                        
+                    }
+                }
+    
+                .addressgender {
+                    display: flex;
+                    justify-content: space-around;
+    
+                    div {
+                        width: 11rem;
+                    }
+                }
+    
+              
+            }
+        }
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 800px)  {
+    .profile {
+        margin-top: 5rem;
+        width: 100%;
+       height: 35rem;
+        .profiletable {
+            width: 100%;
+            height: max-content;
+            background-color: rgb(254, 234, 231);
+            display: flex;
+            flex-direction: column;
+            top: 33%;
+            left:0% ;    
+            .img {
+                display: flex;
+                background-color: rgb(3, 2, 2);
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                padding-top: 15px;
+                width: 100%;
+    
+                img {
+                    height: 150px;
+                    width: 150px;
+                }
+    
+                h3 {
+                    font-family: Cormorant;
+                    color: rgb(254, 234, 231);
+                    margin-top: 15px;
+                    font-weight: 600;
+                }
+    
+               div{
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon {
+                    font-size: 25px;
+                    color: rgb(254, 234, 231);
+                    border: 1px rgb(110, 108, 108) solid;
+                    border-radius: 50%;
+                    margin-left: 10px;
+                    padding: 5px;
+                    cursor: pointer;
+    
+                    &:hover {
+                        border: 1px white solid;
+                    }
+                }
+               }
+            }
+    
+            .info {
+                width: 100%;
+    
+                h4 {
+                    margin: 0%;
+                    font-size: 32px;
+                    margin-top: 17px;
+                    margin-bottom: 5px;
+                    font-family: tuesdayNight;
+                    margin-left: 15px;
+                }
+    
+    
+                .emailphone {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                    
+    
+                    div {
+                        width: 11rem;
+                        
+                    }
+                }
+    
+                .addressgender {
+                    display: flex;
+                    justify-content: space-around;
+    
+                    div {
+                        width: 11rem;
+                    }
+                }
+    
+              
+            }
+        }
+    }
+  }
+
+//   @media only screen and (min-width: 800px)  {
+//     .profile {
+//         margin-top: 5rem;
+//         width: 100%;
+//         height: 40rem;
+    
+//         .profiletable {
+//             width: 50rem;
+//             height: 24rem;
+//             background-color: rgb(254, 234, 231);
+//             display: flex;
+//             position: absolute;
+//             top: 45%;
+//             left: 10%;
+//             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+//             .img {
+//                 display: flex;
+//                 background-color: rgb(3, 2, 2);
+//                 flex-direction: column;
+//                 align-items: center;
+//                 padding: 30px;
+//                 padding-top: 15px;
+//                 width: 14rem;
+    
+//                 img {
+//                     height: 150px;
+//                     width: 150px;
+//                 }
+    
+//                 h3 {
+//                     font-family: Cormorant;
+//                     color: rgb(254, 234, 231);
+//                     margin-top: 15px;
+//                     font-weight: 600;
+//                 }
+    
+//                div{
+//                 margin-top: 10px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 .icon {
+//                     font-size: 25px;
+//                     color: rgb(254, 234, 231);
+//                     border: 1px rgb(110, 108, 108) solid;
+//                     border-radius: 50%;
+//                     margin-left: 10px;
+//                     padding: 5px;
+//                     cursor: pointer;
+    
+//                     &:hover {
+//                         border: 1px white solid;
+//                     }
+//                 }
+//                }
+//             }
+    
+//             .info {
+//                 width: 24rem;
+//                 margin: auto;
+    
+//                 h4 {
+//                     margin: 0%;
+//                     font-size: 32px;
+//                     margin-top: 17px;
+//                     margin-bottom: 5px;
+//                     font-family: tuesdayNight;
+//                 }
+    
+//                 hr {
+//                     margin: 0%;
+//                 }
+    
+//                 .emailphone {
+//                     display: flex;
+//                     justify-content: space-around;
+//                     margin-top: 20px;
+                    
+    
+//                     div {
+//                         width: 11rem;
+//                         h5 {
+//                             font-size: 22px;
+//                             font-family: Cormorant;
+//                             margin: 0%;
+//                             font-weight: 600;
+//                         }
+    
+//                         p {
+//                             font-family: Cormorant;
+//                             font-size: 18px;
+//                         }
+//                     }
+//                 }
+    
+//                 .addressgender {
+//                     display: flex;
+//                     justify-content: space-around;
+    
+//                     div {
+//                         width: 11rem;
+//                         h5 {
+//                             font-size: 22px;
+//                             font-family: Cormorant;
+//                             margin: 0%;
+//                             font-weight: 600;
+//                         }
+    
+//                         p {
+//                             font-family: Cormorant;
+//                             font-size: 18px;
+//                         }
+//                     }
+//                 }
+    
+//                 .account {
+//                     margin-top: 30px;
+    
+//                     h4 {
+//                         font-family: tuesdayNight;
+    
+//                     }
+    
+//                     div {
+//                         display: flex;
+//                         margin-bottom: 20px;
+    
+//                         h4 {
+//                             margin-left: 25px;
+//                             font-family: Cormorant;
+//                             cursor: pointer;
+//                             color: rgb(42, 41, 41);
+//                             font-size: 24px;
+//                             font-weight: 500;
+    
+//                             &:hover {
+//                                 color: rgb(0, 0, 0);
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//   }

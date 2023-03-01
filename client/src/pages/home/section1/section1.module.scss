@@ -1,0 +1,150 @@
+.caption {
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+
+    h3 {
+        font-weight: 300;
+        font-size: 68px;
+        font-style: normal;
+        color: rgb(0, 0, 0);
+        line-height: 60px;
+        text-decoration: none;
+        animation: fadeInRight 1.3s ease-in-out;
+        font-family: lato, sans-serif;
+        letter-spacing: 5px;
+        text-align: start;
+    }
+
+    img {
+        margin-right: 70%;
+        animation: fadeInRight 1s ease-in-out;
+
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 22px;
+        font-style: italic;
+        color: rgb(0, 0, 0);
+        line-height: 27px;
+        text-decoration: none;
+        transform: none;
+        font-family: Cormorant;
+        letter-spacing: 0;
+        text-align: start;
+        margin-top: 5px;
+        animation: fadeInRight 1.5s ease-in-out;
+
+    }
+
+    button {
+        height: 45px;
+        width: 170px;
+        background-color: black;
+        color: white;
+        border: 1px black solid;
+        font-weight: 400;
+        font-size: 12px;
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        line-height: 24px;
+        text-decoration: none;
+        transform: uppercase;
+        font-family: Lato sans-serif;
+        letter-spacing: 2.4px;
+        animation: fadeInRight 1.7s ease-in-out;
+
+        &:hover {
+            background-color: rgba(255, 228, 196, 0);
+            color: black;
+        }
+    }
+}
+
+.captionblack {
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+
+    h3 {
+        font-weight: 300;
+        font-size: 68px;
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        line-height: 60px;
+        text-decoration: none;
+        font-family: lato, sans-serif;
+        letter-spacing: 5px;
+        text-align: start;
+        animation: fadeInRight 1.3s ease-in-out;
+
+    }
+
+    img {
+        margin-right: 70%;
+        animation: fadeInRight 1s ease-in-out;
+
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 22px;
+        font-style: italic;
+        color: rgb(255, 255, 255);
+        line-height: 27px;
+        text-decoration: none;
+        transform: none;
+        font-family: Cormorant;
+        letter-spacing: 0;
+        text-align: start;
+        margin-top: 5px;
+        animation: fadeInRight 1.5s ease-in-out;
+
+    }
+
+    button {
+        height: 45px;
+        width: 170px;
+        background-color: rgb(255, 255, 255);
+        border: 1px rgb(255, 255, 255) solid;
+        font-weight: 400;
+        font-size: 12px;
+        font-style: normal;
+        color: rgb(0, 0, 0);
+        line-height: 24px;
+        text-decoration: none;
+        transform: uppercase;
+        font-family: Lato sans-serif;
+        letter-spacing: 2.4px;
+        animation: fadeInRight 1.7s ease-in-out;
+
+        &:hover {
+            background-color: rgba(255, 228, 196, 0);
+            color: rgb(255, 255, 255);
+        }
+    }
+
+
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,336 @@
+@font-face {
+    font-family: latoRegular;
+    src: url('../../../fonts/Lato-Regular.ttf');
+}
+
+
+
+.section4 {
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+
+        .card {
+            width: 25%;
+            height: 40rem;
+            position: relative;
+            margin-left: 40px;
+
+            img {
+                height: 22rem;
+                width: 16rem;
+            }
+
+            span {
+                position: absolute;
+                top: 0%;
+                left: 20px;
+                background-color: rgb(254, 234, 231);
+                font-weight: 500;
+                font-size: 26px;
+                font-style: normal;
+                color: rgb(0, 0, 0);
+                line-height: 24px;
+                text-decoration: none;
+                transform: none;
+                font-family: TuesdayNight;
+                letter-spacing: 0;
+                height: 80px;
+                width: 45px;
+                padding-top: 15px;
+                padding-left: 7px;
+
+
+            }
+
+            h4 {
+                font-weight: 500;
+                font-size: 17px;
+                font-style: italic;
+                color: rgb(157, 155, 155);
+                line-height: 20.4px;
+                text-decoration: none;
+                transform: none;
+                font-family: Cormorant;
+                letter-spacing: 0;
+                margin-top: 10px;
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 17px;
+                font-style: normal;
+                color: rgb(0, 0, 0);
+                line-height: 23.001px;
+                text-decoration: none;
+                transform: uppercase;
+                font-family: latoRegular;
+                letter-spacing: 1.275px;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 17px;
+                font-style: normal;
+                color: rgb(131, 131, 131);
+                line-height: 23px;
+                text-decoration: none;
+                transform: none;
+                font-family: Cormorant;
+                letter-spacing: 0;
+            }
+
+            div {
+                display: flex;
+                margin: 0%;
+
+                button {
+                    background-color: rgba(240, 248, 255, 0);
+                    border: none;
+                    font-family: latoRegular;
+                    font-size: 12px;
+                    margin-top: 0%;
+
+                }
+
+                hr {
+                    width: 5px;
+                    height: 1px;
+                    background-color: #000000;
+                    border-color: #000000;
+                }
+
+                &:hover {
+                    hr {
+                        width: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section4 {
+        margin: 0%;
+        width: 80%;
+        margin: auto;
+
+        .cards {
+            flex-wrap: wrap;
+            margin-top: 50px;
+
+            .card {
+                width: 100%;
+                margin: 0%;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .section4 {
+        margin: 0%;
+        width: 80%;
+        margin: auto;
+
+        .cards {
+            flex-wrap: wrap;
+            margin-top: 50px;
+
+            .card {
+                width: 100%;
+                margin: 0%;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+.aboutdetail {
+    margin-top: 5rem;
+    width: 100%;
+    height: 85rem;
+    padding: 0%;
+
+    .heading {
+        background-image: url("https://biagiotti.qodeinteractive.com/elementor/wp-content/uploads/2019/07/title-img-1.jpg");
+        height: 20rem;
+        background-size: auto;
+
+        .headdiv {
+            padding-top: 7%;
+            padding-left: 10%;
+
+
+            span {
+                font-family: tuesdayNight;
+                color: rgb(183, 180, 180);
+                font-size: 40px;
+                margin: 0%;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-family: latoRegular;
+                margin: 0%;
+            }
+        }
+    }
+
+    .detail {
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 80rem;
+
+        .img {
+            display: flex;
+            justify-content: center;
+            padding: 0%;
+
+            img {
+                display: block;
+                height: 27rem;
+                width: 40rem;
+                max-width: 100%;
+                aspect-ratio: auto 1300 / 621;
+                overflow: initial;
+            }
+        }
+
+        .info {
+            .head {
+                margin-top: 50px;
+
+                span {
+                    font-size: 20px;
+                    font-family: Cormorant;
+                    font-style: italic;
+                    color: rgb(176, 174, 174);
+                }
+
+                h3 {
+                    font-size: 30px;
+                    font-family: latoRegular;
+                }
+            }
+
+            div {
+                p {
+                    font-size: 18px;
+                    font-family: Cormorant;
+                    color: rgb(126, 124, 124);
+                    padding: 40px;
+                    padding-top: 0%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutdetail {
+        margin-top: 5rem;
+        width: 100%;
+        height: 120rem;
+        padding: 0%;
+
+        .heading {
+            background-image: url("https://biagiotti.qodeinteractive.com/elementor/wp-content/uploads/2019/07/title-img-1.jpg");
+            height: 30rem;
+            background-size: auto;
+
+            .headdiv {
+                padding-top: 7%;
+                padding-left: 10%;
+
+
+                span {
+                    font-family: tuesdayNight;
+                    color: rgb(183, 180, 180);
+                    font-size: 40px;
+                    margin: 0%;
+                }
+
+                h3 {
+                    font-size: 40px;
+                    font-family: latoRegular;
+                    margin: 0%;
+                }
+            }
+        }
+
+        .detail {
+            padding: 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 110rem;
+
+            .img {
+                display: flex;
+                justify-content: center;
+                padding: 0%;
+
+                img {
+                    display: block;
+                    height: 27rem;
+                    width: 40rem;
+                    max-width: 100%;
+                    aspect-ratio: auto 1300 / 621;
+                    overflow: initial;
+                }
+            }
+
+            .info {
+                .head {
+                    margin-top: 50px;
+
+                    span {
+                        font-size: 20px;
+                        font-family: Cormorant;
+                        font-style: italic;
+                        color: rgb(176, 174, 174);
+                    }
+
+                    h3 {
+                        font-size: 30px;
+                        font-family: latoRegular;
+                    }
+                }
+
+                div {
+                    p {
+                        font-size: 18px;
+                        font-family: Cormorant;
+                        color: rgb(126, 124, 124);
+                        padding: 40px;
+                        padding-top: 0%;
+                    }
+                }
+            }
+        }
+    }
+}

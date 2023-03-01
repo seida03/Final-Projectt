@@ -1,0 +1,246 @@
+@font-face {
+    font-family: tuesdayNight;
+    src: url('../../../fonts/TuesdayNight-Regular.otf');
+}
+
+@font-face {
+    font-family: latoRegular;
+    src: url('../../../fonts/Lato-Regular.ttf');
+}
+
+
+.bir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    div {
+        width: 50%;
+        height: 20rem;
+        background-image: url('../../../images/m-h-background-6-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+
+
+        h2 {
+            font-size: 218px;
+            font-family: tuesdayNight;
+            color: white;
+            position: absolute;
+            bottom: 0%;
+
+        }
+    }
+
+    div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            margin-left: 5%;
+            height: 50px;
+            width: 450px;
+            border: 1px black solid;
+            background-color: rgba(240, 248, 255, 0);
+
+        }
+
+        button {
+            height: 50px;
+            width: 130px;
+            background-color: black;
+            color: white;
+            border: 1px black solid;
+            font-weight: 400;
+            font-size: 12px;
+            font-style: normal;
+            line-height: 24px;
+            text-decoration: none;
+            font-family: Lato;
+            letter-spacing: 2.4px;
+
+            &:hover {
+                background-color: rgba(240, 248, 255, 0);
+                color: black;
+            }
+
+        }
+    }
+
+}
+
+.iki {
+    position: relative;
+
+    .pic {
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            height: 14rem;
+            width: 16.66%;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+
+
+            &:hover {
+                filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
+                filter: opacity(0.9);
+                transform: scale(1.1);
+
+            }
+        }
+    }
+
+    .minicard {
+        position: absolute;
+        background-color: white;
+        height: 60%;
+        width: 40%;
+        left: 30%;
+        top: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        h3 {
+            font-weight: 400;
+            font-size: 35px;
+            font-style: normal;
+            color: rgb(229, 229, 229);
+            line-height: normal;
+            text-decoration: none;
+            transform: none;
+            font-family: TuesdayNight;
+            letter-spacing: 0;
+            margin-bottom: -27px;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 25px;
+            font-style: normal;
+            color: rgb(0, 0, 0);
+            line-height: 38.01px;
+            text-decoration: none;
+            transform: uppercase;
+            font-family: latoRegular;
+            letter-spacing: 1.5px;
+            margin: 0%;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 20px;
+            font-style: italic;
+            color: rgb(72, 72, 72);
+            line-height: 23px;
+            text-decoration: none;
+            transform: none;
+            font-family: Cormorant;
+            letter-spacing: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bir {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(254, 234, 231);
+
+        .sub {
+            display: none;
+        }
+
+        div {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0%;
+            padding: 0%;
+        }
+
+    }
+
+    .iki {
+        position: relative;
+
+
+        .pic {
+            display: flex;
+            flex-wrap: wrap;
+
+            img {
+                height: 14rem;
+                width: 50%;
+            }
+        }
+
+        .minicard {
+            position: absolute;
+            background-color: white;
+            height: 20rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            margin: 0%;
+            padding: 0%;
+            margin: auto;
+            left: 0%;
+            top: 40%;
+
+            h3 {
+                font-weight: 400;
+                font-size: 35px;
+                font-style: normal;
+                color: rgb(229, 229, 229);
+                line-height: normal;
+                text-decoration: none;
+                transform: none;
+                font-family: TuesdayNight;
+                letter-spacing: 0;
+                margin-bottom: -27px;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: 25px;
+                font-style: normal;
+                color: rgb(0, 0, 0);
+                line-height: 38.01px;
+                text-decoration: none;
+                transform: uppercase;
+                font-family: latoRegular;
+                letter-spacing: 1.5px;
+                margin: 0%;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 20px;
+                font-style: italic;
+                color: rgb(72, 72, 72);
+                line-height: 23px;
+                text-decoration: none;
+                transform: none;
+                font-family: Cormorant;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+

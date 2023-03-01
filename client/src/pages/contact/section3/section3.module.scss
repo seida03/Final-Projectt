@@ -1,0 +1,286 @@
+.section3 {
+    width: 100%;
+    height: 40rem;
+    background-image: url('../../../images/faq-title-area-5.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    .form {
+        width: 50%;
+
+        .formi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .field1 {
+                width: 300px;
+                height: 50px;
+                margin-top: 20px;
+                margin-left: 60%;
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: 16px;
+                    font-style: italic;
+                    color: rgb(90, 90, 90);
+                    line-height: 24.992px;
+                    text-decoration: none;
+                    transform: none;
+                    font-family: Cormorant;
+                    letter-spacing: 0;
+                    margin-top: 0%;
+                    text-align: left;
+                    max-width: 80%;
+                }
+
+            }
+
+            .error {
+                font-weight: 400;
+                font-size: 16px;
+                font-style: italic;
+                color: rgb(224, 0, 0);
+                line-height: 24.992px;
+                text-decoration: none;
+                transform: none;
+                font-family: Cormorant;
+                letter-spacing: 0;
+                margin-top: 0%;
+                text-align: left;
+                margin-left: 10px;
+
+            }
+
+            .field2 {
+                width: 300px;
+                height: 150px;
+                margin-top: 20px;
+                margin-left: 60%;
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: 16px;
+                    font-style: italic;
+                    color: rgb(90, 90, 90);
+                    line-height: 24.992px;
+                    text-decoration: none;
+                    transform: none;
+                    font-family: Cormorant;
+                    letter-spacing: 0;
+                    margin-top: 0%;
+                    text-align: left;
+                    max-width: 80%;
+                }
+            }
+
+            button {
+                height: 45px;
+                width: 170px;
+                background-color: black;
+                color: white;
+                border: 1px black solid;
+                font-weight: 400;
+                font-size: 12px;
+                font-style: normal;
+                color: rgb(255, 255, 255);
+                line-height: 24px;
+                text-decoration: none;
+                transform: uppercase;
+                font-family: latoRegular;
+                letter-spacing: 2.4px;
+                animation: fadeInRight 1.7s ease-in-out;
+                border-radius: 0%;
+                margin-top: 20px;
+                margin-left: 60px;
+
+                &:hover {
+                    background-color: rgba(255, 228, 196, 0);
+                    color: black;
+
+                }
+            }
+        }
+    }
+
+    .map {
+        width: 50%;
+
+        .mapp {
+            height: 40rem;
+            width: 100%;
+        }
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16%;
+        margin-top: 60px;
+
+        span {
+            font-weight: 400;
+            font-size: 35px;
+            font-style: normal;
+            color: rgb(229, 229, 229);
+            line-height: normal;
+            text-decoration: none;
+            transform: none;
+            font-family: TuesdayNight;
+            letter-spacing: 0;
+            margin-bottom: -27px;
+            margin-left: 15px;
+
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 30px;
+            font-style: normal;
+            color: rgb(0, 0, 0);
+            line-height: 38.01px;
+            text-decoration: none;
+            transform: uppercase;
+            font-family: latoRegular;
+            letter-spacing: 1.5px;
+            margin: 0%;
+            text-align: left;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 22px;
+            font-style: italic;
+            color: rgb(90, 90, 90);
+            line-height: 24.992px;
+            text-decoration: none;
+            transform: none;
+            font-family: Cormorant;
+            letter-spacing: 0;
+            margin-top: 0%;
+            text-align: left;
+            max-width: 80%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section3 {
+        width: 100%;
+        height: 70rem;
+        flex-direction: column;
+
+        .form {
+            width: 100%;
+            height: 50rem;
+
+            .formi {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                .field1 {
+                    width: 300px;
+                    height: 50px;
+                    margin: 0%;
+                    margin-top: 20px;
+
+
+
+                }
+
+
+                .field2 {
+                    width: 300px;
+                    height: 150px;
+                    margin: 0%;
+                    margin-top: 20px;
+                    text-align: left;
+                }
+
+                button {
+                    margin: 0%;
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+
+                    &:hover {
+                        background-color: rgba(255, 228, 196, 0);
+                        color: black;
+
+                    }
+                }
+            }
+        }
+
+        .map {
+            width: 100%;
+
+            .mapp {
+                height: 27rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px)and (max-width: 800px) {
+    .section3 {
+        width: 100%;
+        height: 70rem;
+        flex-direction: column;
+
+        .form {
+            width: 100%;
+
+            .formi {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                .field1 {
+                    width: 300px;
+                    height: 50px;
+                    margin: 0%;
+                    margin-top: 20px;
+
+
+
+                }
+
+
+                .field2 {
+                    width: 300px;
+                    height: 150px;
+                    margin: 0%;
+                    margin-top: 20px;
+                    text-align: left;
+                }
+
+                button {
+                    margin: 0%;
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+
+                    &:hover {
+                        background-color: rgba(255, 228, 196, 0);
+                        color: black;
+
+                    }
+                }
+            }
+        }
+
+        .map {
+            width: 100%;
+
+            .mapp {
+                height: 40rem;
+                width: 100%;
+            }
+        }
+    }
+}

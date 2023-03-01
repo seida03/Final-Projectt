@@ -1,0 +1,58 @@
+.dashboard {
+    background-color: rgb(247, 181, 181);
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 60px;
+            width: 80px;
+        }
+
+        h4 {
+            font-family: latoRegular;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
+
+    .ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-top: 15px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .link {
+                    text-decoration: none;
+                    color: rgb(42, 41, 41);
+                    font-size: 18px;
+                    font-family: latoRegular;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+
+                .icon {
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
