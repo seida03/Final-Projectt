@@ -40,61 +40,63 @@ function Checkout() {
     }, [])
     return (
         <>
-        loading ? <Loading/>:
+       {
+        loading ? <Loading/> :
         <div className={styles.checkout}>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Checkout</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
-            {/* <div className={styles.heading}>
-                <h3>CHECKOUT</h3>
-            </div> */}
-            <div id='PaymentForm'>
-                <Cards
-                    number={state.number}
-                    expiry={state.expiry}
-                    cvc={state.cvc}
-                    name={state.name}
-                    focused={state.focus}
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Checkout</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+        {/* <div className={styles.heading}>
+            <h3>CHECKOUT</h3>
+        </div> */}
+        <div id='PaymentForm'>
+            <Cards
+                number={state.number}
+                expiry={state.expiry}
+                cvc={state.cvc}
+                name={state.name}
+                focused={state.focus}
+            />
+            <form className={styles.form}>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={state.name}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
                 />
-                <form className={styles.form}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={state.name}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                    />
-                    <input
-                        type="number"
-                        name="number"
-                        placeholder="Card Number"
-                        value={state.number}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                    />
-                    <input
-                        type="number"
-                        name="cvc"
-                        placeholder="CVC"
-                        value={state.cvc}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                    />
-                    <input
-                        type="number"
-                        name="expiry"
-                        placeholder="Expiry"
-                        value={state.expiry}
-                        onChange={handleInputChange}
-                        onFocus={handleInputFocus}
-                    />
-                </form>
-            </div>
-            <button onClick={handleSubmit}>BUY</button>
+                <input
+                    type="number"
+                    name="number"
+                    placeholder="Card Number"
+                    value={state.number}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                />
+                <input
+                    type="number"
+                    name="cvc"
+                    placeholder="CVC"
+                    value={state.cvc}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                />
+                <input
+                    type="number"
+                    name="expiry"
+                    placeholder="Expiry"
+                    value={state.expiry}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                />
+            </form>
         </div>
+        <button onClick={handleSubmit}>BUY</button>
+    </div>
+       }
         
         </>
     )

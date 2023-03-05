@@ -133,9 +133,9 @@ function Header() {
             console.log(error);
         }
         navigate("/my-account")
-        setBlur(null)
-        setRegisteri(register2)
-        setLogin(login2)
+        // setBlur(null)
+        // setRegisteri(register2)
+        // setLogin(login2)
 
     }
 
@@ -192,7 +192,7 @@ function Header() {
     const cartLength = useSelector(state => state.cart.cart)
     let totalPrice = 0;
     if ( cartLength!=0 && cartLength != null) {
-        cartLength.forEach(item => totalPrice += item.price * item.count)
+        cartLength?.forEach(item => totalPrice += item.price * item.count)
     }
     const handleRemove = async (id) => {
         await dispatch(deleteProduct(id))

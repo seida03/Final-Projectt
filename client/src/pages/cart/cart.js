@@ -19,16 +19,16 @@ function Cart() {
     console.log(userCart, cart);
 
     const handleDelete = async (id) => {
-        dispatch(deleteProduct(id))
-        console.log(user._id)
-        dispatch(getUserCartt())
+        await dispatch(deleteProduct(id))
+        dispatch(getUserCart(user._id))
     }
 
     const cartLength = useSelector(state => state.cart.cart)
     let totalPrice = 0;
     if (cartLength != 0 && cartLength != null) {
-        cartLength.forEach(item => totalPrice += item.price * item.count)
+        cartLength?.forEach(item => totalPrice += item.price * item.count)
     }
+    console.log(cartLength);
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {

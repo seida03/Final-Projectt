@@ -21,7 +21,7 @@ function Account() {
         }
     }, []);
     const validationSchema = yup.object({
-        email: yup.string().required(true).email(),
+        email: yup.string().required(true),
         password: yup.string().required(true).min(5),
     });
     const [loading, setLoading] = useState(false)
@@ -88,10 +88,10 @@ function Account() {
                                         {({ errors, touched }) => (
                                             <>
                                                 <Form className={styles.formi}>
-                                                    <Field name="email" placeholder="Username*" value={loginusername} onChange={e => setLoginusername(e.target.value)} className={styles.field} />
-                                                    {errors.email && touched.email ? <div className={styles.error}>Error:Username is required.</div> : null}
+                                                    <Field name="email" placeholder="Username*" type="text" value={loginusername} onChange={e => setLoginusername(e.target.value)} className={styles.field} />
+                                                    {errors.email && touched.email ? <div className={styles.error}>Error:Enter correct username.</div> : null}
                                                     <Field name="password" placeholder="Password*" className={styles.field} type="password" value={loginpassword} onChange={e => setLoginpassword(e.target.value)} />
-                                                    {errors.password && touched.password ? <div className={styles.error}>Error:Password is required.</div> : null}
+                                                    {errors.password && touched.password ? <div className={styles.error}>Error:Enter correct password.</div> : null}
                                                     <button type='submit' onClick={handleLoginReal}>LOG IN</button>
                                                 </Form>
                                             </>

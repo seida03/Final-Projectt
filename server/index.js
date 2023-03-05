@@ -338,7 +338,6 @@ app.get('/cart', (req, res, next) => {
     }
 }, async (req, res) => {
     try {
-        // const cartPreview = await .find().limit(12)
         const user = await User.findById(req.userId)
         if (!user) {
             return res.json({ message: "user not found" })
@@ -373,7 +372,6 @@ app.get('/cart/:id', (req, res, next) => {
             return res.json({ message: "user not found" })
         }
         let userCart = user.cart
-        console.log(userCart.filter(x => x.productId == "63ebd1f28ccce50024ab302f"));
         const list = await Promise.all(
             user.cart.map(item => {
                 return Cosmetics.findById(item.productId)
@@ -444,7 +442,6 @@ app.post("/wish/:id", (req, res, next) => {
         if (user?.wishlist.find(x => String(x) == id)) {
             return res.json({ message: "product exists" })
         }
-        console.log(id);
         await User.findByIdAndUpdate(req.userId, {
             $push: {
                 wishlist: id,
@@ -456,6 +453,8 @@ app.post("/wish/:id", (req, res, next) => {
         res.json({ message: "error happened" })
     }
 })
+
+
 app.get('/wish/:id', (req, res, next) => {
     const token = (req.headers.authorization || '').replace(/Bearer\s?/, '')
     if (token) {
@@ -486,6 +485,8 @@ app.get('/wish/:id', (req, res, next) => {
     }
 })
 
+
+
 app.delete('/wish/:id', (req, res, next) => {
     const token = (req.headers.authorization || '').replace(/Bearer\s?/, '')
     if (token) {
@@ -502,7 +503,6 @@ app.delete('/wish/:id', (req, res, next) => {
     }
 }, async (req, res) => {
     try {
-        console.log(req.params.id);
         await User.findByIdAndUpdate(req.userId, {
             $pull: {
                 wishlist: req.params.id
