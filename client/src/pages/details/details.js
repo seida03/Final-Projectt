@@ -13,10 +13,10 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import styles from '../details/details.module.scss'
 import Loading from '../loading/loading';
 import { Helmet } from 'react-helmet';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToWish } from '../../redux/features/wishSlice';
 function Details() {
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
     const { id } = useParams();
     const [detail, setDetail] = useState({});
     const [data, setData] = useState([])
@@ -38,6 +38,7 @@ function Details() {
             setLoading(false)
         }, 1000)
     }, [])
+    const { user } = useSelector(state => state.auth)
 
     const handleWish = (id) => {
         dispatch(addToWish(id))
@@ -72,7 +73,7 @@ function Details() {
                         </div>
                         <p className={styles.description}>{detail.description}</p>
 
-                        <div className={styles.wish}><CiHeart className={styles.heart} onClick={() => handleWish(detail._id)}/> <p>Add to Wishlist</p></div>
+                        <div className={styles.wish}><CiHeart className={styles.heart} onClick={() => handleWish(detail._id)} /> <p>Add to Wishlist</p></div>
                     </div>
 
 
