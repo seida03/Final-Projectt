@@ -191,8 +191,8 @@ function Header() {
 
     const cartLength = useSelector(state => state.cart.cart)
     let totalPrice = 0;
-    if ( cartLength!=0 && cartLength != null) {
-        cartLength?.forEach(item => totalPrice += item.price * item.count)
+    if (cartLength != 0 && cartLength != null) {
+        cartLength.forEach(item => totalPrice += item.price * item.count)
     }
     const handleRemove = async (id) => {
         await dispatch(deleteProduct(id))

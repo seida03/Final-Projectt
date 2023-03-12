@@ -16,7 +16,7 @@ function Cart() {
     }, [dispatch])
 
     const { userCart } = useSelector(state => state.cart)
-    console.log(userCart, cart);
+    // console.log(userCart, cart);
 
     const handleDelete = async (id) => {
         await dispatch(deleteProduct(id))
@@ -25,10 +25,9 @@ function Cart() {
 
     const cartLength = useSelector(state => state.cart.cart)
     let totalPrice = 0;
-    if (cartLength != 0 && cartLength != null) {
-        cartLength?.forEach(item => totalPrice += item.price * item.count)
+    if (cartLength!=0 && cartLength!= null) {
+        cartLength.forEach(item => totalPrice += item.price * item.count)
     }
-    console.log(cartLength);
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
@@ -58,7 +57,7 @@ function Cart() {
                             <h3>CART</h3>
                         </div>
                         {
-                            cartLength != null && cartLength != 0 ?
+                            cartLength!= null && cartLength!= 0 ?
                                 <>
                                     <div className={styles.table}>
                                         <table>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../account/account.module.scss'
-import * as yup from "yup";
+import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
 import Loading from '../loading/loading';
 import Profile from './profile/profile';
@@ -20,9 +20,15 @@ function Account() {
             console.log(items);
         }
     }, []);
-    const validationSchema = yup.object({
-        username: yup.string().required(true),
-        password: yup.string().required(true).min(5),
+    const validationSchema = Yup.object().shape({
+
+        username: Yup.string().required("Please enter username"),
+        password: Yup.string()
+            .required("Please enter password")
+            .matches(
+                /^(?=.*\d)(?=.*[a-z])(?=.*[a-z]).{8,}$/,
+                "Password should min 8 letter password, with at least a symbol  uppercase letter and a number"
+            ),
     });
     const [loading, setLoading] = useState(false)
 
@@ -38,22 +44,8 @@ function Account() {
     const { user } = useSelector(state => state.auth)
     const [loginusername, setLoginusername] = useState("")
     const [loginpassword, setLoginpassword] = useState("")
-
-
-    const handleLoginReal = () => {
-        try {
-            dispatch(loginUser({
-                username: loginusername,
-                password: loginpassword
-            }))
-        } catch (error) {
-            console.log(error);
-        }
-        navigate('/')
-    }
     return (
         <>
-
             {
                 loading ?
                     <Loading />
@@ -77,22 +69,56 @@ function Account() {
                                     </div>
                                     <Formik
                                         initialValues={{
-                                            email: "",
+                                            username: "",
                                             password: "",
                                         }}
                                         validationSchema={validationSchema}
                                         onSubmit={(values) => {
                                             console.log(values);
+                                            try {
+                                                dispatch(loginUser({
+                                                    username: values.username,
+                                                    password: values.password
+                                                }))
+                                            } catch (error) {
+                                                console.log(error);
+                                            }
+                                            navigate('/')
                                         }}
                                     >
                                         {({ errors, touched }) => (
                                             <>
                                                 <Form className={styles.formi}>
-                                                    <Field name="username" placeholder="Username*" type="text" value={loginusername} onChange={e => setLoginusername(e.target.value)} className={styles.field} />
-                                                    {errors.username && touched.username ? <div className={styles.error}>Error:Enter correct username.</div> : null}
-                                                    <Field name="password" placeholder="Password*" className={styles.field} type="password" value={loginpassword} onChange={e => setLoginpassword(e.target.value)} />
-                                                    {errors.password && touched.password ? <div className={styles.error}>Error:Enter correct password.</div> : null}
-                                                    <button type='submit' onClick={handleLoginReal}>LOG IN</button>
+                                                    <Field name="username" placeholder="Username*" type="text" /*value={loginusername} onChange={e => setLoginusername(e.target.value)}*/ className={styles.field} />
+                                                    {errors.username && touched.username && (
+                                                        <div style={
+                                                            errors.username &&
+                                                            {
+                                                                fontSize: "17px",
+                                                                color: "red",
+                                                                marginTop: "0px",
+                                                                fontFamily: "Cormorant",
+                                                            }
+                                                        }
+                                                        >
+                                                            {errors.username}
+                                                        </div>
+                                                    )}
+                                                    <Field name="password" placeholder="Password*" className={styles.field} type="password" /*value={loginpassword} onChange={e => setLoginpassword(e.target.value)}*/ />
+                                                    {errors.password && touched.password && <div style={
+                                                        errors.password &&
+                                                        {
+                                                            fontSize: "17px",
+                                                            color: "red",
+                                                            marginTop: "0px",
+                                                            fontFamily: "Cormorant",
+
+                                                        }
+                                                    }
+                                                    >
+                                                        {errors.password}
+                                                    </div>}
+                                                    <button type='submit'>LOG IN</button>
                                                 </Form>
                                             </>
                                         )}
