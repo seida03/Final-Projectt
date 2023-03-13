@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { checkIsAuth } from '../../redux/features/authSlice'
 import { deleteProduct, getUserCart, getUserCartt } from '../../redux/features/cartSlice'
 import styles from '../cart/cart.module.scss'
 import Loading from '../loading/loading'
@@ -11,13 +12,12 @@ function Cart() {
     const navigate = useNavigate()
     const { cart } = useSelector(state => state.cart)
     const { user } = useSelector(state => state.auth)
+    const isAuth=useSelector(checkIsAuth)
     useEffect(() => {
         dispatch(getUserCartt())
     }, [dispatch])
 
     const { userCart } = useSelector(state => state.cart)
-    // console.log(userCart, cart);
-
     const handleDelete = async (id) => {
         await dispatch(deleteProduct(id))
         dispatch(getUserCart(user._id))
@@ -25,8 +25,8 @@ function Cart() {
 
     const cartLength = useSelector(state => state.cart.cart)
     let totalPrice = 0;
-    if (cartLength!=0 && cartLength!= null) {
-        cartLength.forEach(item => totalPrice += item.price * item.count)
+    if (isAuth) {
+        cartLength?.forEach(item => totalPrice += item.price * item.count)
     }
     const [loading, setLoading] = useState(false)
 
@@ -57,7 +57,7 @@ function Cart() {
                             <h3>CART</h3>
                         </div>
                         {
-                            cartLength!= null && cartLength!= 0 ?
+                           isAuth && cartLength!=0 && cartLength!==null ?
                                 <>
                                     <div className={styles.table}>
                                         <table>
@@ -71,7 +71,7 @@ function Cart() {
                                                 </tr>
                                             </thead>
 
-                                            {cart && cart.map((item) => (
+                                            {isAuth && cart && cart.map((item) => (
                                                 <tbody key={item._id}>
                                                     <tr>
                                                         <td className={styles.x} onClick={() => handleDelete(item?._id)}>x</td>

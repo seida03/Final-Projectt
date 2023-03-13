@@ -133,9 +133,6 @@ function Header() {
             console.log(error);
         }
         navigate("/my-account")
-        // setBlur(null)
-        // setRegisteri(register2)
-        // setLogin(login2)
 
     }
 
@@ -191,8 +188,8 @@ function Header() {
 
     const cartLength = useSelector(state => state.cart.cart)
     let totalPrice = 0;
-    if (cartLength != 0 && cartLength != null) {
-        cartLength.forEach(item => totalPrice += item.price * item.count)
+    if (isAuth) {
+        cartLength?.forEach(item => totalPrice += item.price * item.count)
     }
     const handleRemove = async (id) => {
         await dispatch(deleteProduct(id))
@@ -297,10 +294,10 @@ function Header() {
             </div>
             <div className={hovercart} onMouseEnter={opencart} onMouseLeave={closecart}>
                 <div>
-                    {cartLength != 0 && cartLength != null ?
+                    { isAuth && cartLength!=0 ?
                         <>
                             <div className={styles.previewWrap}>
-                                {cartLength && cartLength.map((item) => (
+                                {isAuth && cartLength && cartLength.map((item) => (
                                     <div className={styles.div1} key={item._id}>
                                         <img src={item.img} />
                                         <div className={styles.previewContent}>

@@ -63,7 +63,6 @@ function Wishlist() {
                                                 </td>
                                                 <td>${item.price}</td>
                                                 <td className={styles.stock}><p>In stock</p></td>
-                                                <td className={styles.addtocart}><button >ADD TO CART</button></td>
                                             </tr>
                                         ))
                                     }
