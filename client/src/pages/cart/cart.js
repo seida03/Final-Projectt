@@ -18,9 +18,9 @@ function Cart() {
     }, [dispatch])
 
     const { userCart } = useSelector(state => state.cart)
-    const handleDelete = async (id) => {
-        await dispatch(deleteProduct(id))
-        dispatch(getUserCart(user._id))
+    const handleDelete =(id) => {
+        dispatch(deleteProduct(id))
+        // dispatch(getUserCart(user._id))
     }
 
     const cartLength = useSelector(state => state.cart.cart)
@@ -70,11 +70,10 @@ function Cart() {
                                                     <th>SUBTOTAL</th>
                                                 </tr>
                                             </thead>
-
                                             {isAuth && cart && cart.map((item) => (
                                                 <tbody key={item._id}>
                                                     <tr>
-                                                        <td className={styles.x} onClick={() => handleDelete(item?._id)}>x</td>
+                                                        <td className={styles.x} onClick={() => handleDelete(item?.productId)}>x</td>
                                                         <td className={styles.img}>
                                                             <img src={item.img} />
                                                             <h5>{item.name}</h5>

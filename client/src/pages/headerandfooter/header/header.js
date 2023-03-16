@@ -191,9 +191,10 @@ function Header() {
     if (isAuth) {
         cartLength?.forEach(item => totalPrice += item.price * item.count)
     }
-    const handleRemove = async (id) => {
-        await dispatch(deleteProduct(id))
-        dispatch(getUserCart(user._id))
+    const handleRemove = (id) => {
+        dispatch(deleteProduct(id))
+        // dispatch(getUserCart(user._id))
+
     }
 
     useEffect(() => {
@@ -294,7 +295,7 @@ function Header() {
             </div>
             <div className={hovercart} onMouseEnter={opencart} onMouseLeave={closecart}>
                 <div>
-                    { isAuth && cartLength!=0 ?
+                    {isAuth && cartLength != 0 ?
                         <>
                             <div className={styles.previewWrap}>
                                 {isAuth && cartLength && cartLength.map((item) => (
@@ -304,7 +305,7 @@ function Header() {
                                             <h4>{item.name}</h4>
                                             <p>{item.count}x ${item.price}</p>
                                         </div>
-                                        <div className={styles.delete} onClick={() => handleRemove(item._id)}>x</div>
+                                        <div className={styles.delete} onClick={() => handleRemove(item.productId)}>x</div>
                                     </div>
                                 ))
                                 }
