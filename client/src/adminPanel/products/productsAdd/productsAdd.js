@@ -40,6 +40,7 @@ function ProductAdd() {
           };
 
           axios.post("http://localhost:8000/cosmetics", obj);
+          alert("Product added")
         }}
       >
         {({ errors, touched }) => (
